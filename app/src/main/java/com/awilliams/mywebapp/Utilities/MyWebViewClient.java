@@ -1,4 +1,4 @@
-package com.awilliams.mywebapp;
+package com.awilliams.mywebapp.Utilities;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -16,7 +16,7 @@ public class MyWebViewClient extends WebViewClient {
     private static final String TAG = MyWebViewClient.class.getSimpleName();
 
     private Activity activity = null;
-    MyWebViewClient(Activity activity ){this.activity = activity;}
+    public MyWebViewClient(Activity activity ){this.activity = activity;}
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {

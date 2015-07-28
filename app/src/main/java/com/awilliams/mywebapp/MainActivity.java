@@ -12,13 +12,15 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
 
+import com.awilliams.mywebapp.Utilities.MyWebViewClient;
+
 /**
  * Created by Andrew on 7/26/2015.
  */
 public class MainActivity extends Activity {
 
     private WebView myWebview;
-    private final String STARTURL = "http://www.google.com";
+    private final String STARTURL = "http://www.itichost.eil-server.cba.ua.edu";
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -39,6 +41,7 @@ public class MainActivity extends Activity {
         myWebview.setWebViewClient(new MyWebViewClient(this));
         myWebview.setWebChromeClient(new WebChromeClient());
         setContentView(myWebview);
+        myWebview.loadUrl(STARTURL);
     }
 
     @Override
